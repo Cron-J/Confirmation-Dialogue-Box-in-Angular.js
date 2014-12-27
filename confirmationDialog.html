@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js" ng-app="ConfDialogModal">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link data-require="bootstrap@*" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+
+    <script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.27/angular.js" data-semver="1.2.27"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+    <script src="confirmationDialog.js"></script>
+    <!-- include this file correctly -->
+    <!-- <script src="file:///F:/git-repo/Confirmation-Dialog-Box/confirmation-modal-dialog/confirmationDialog.js"></script> -->
+
+</head>
+
+<body ng-controller="ConfDialogCtrl">
+
+    <div style="text-align:center;">
+        <button class="btn btn-primary" mk-confirmation-dialog confirmed-click='test()'>Open Modal Dialog</button>
+    </div>
+
+
+    <script type="text/ng-template" id="conftemplate.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Are you sure you want to do this ?</h3>
+        </div>
+        <div class="modal-body">
+            body
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+
+
+
+</body>
+
+</html>
